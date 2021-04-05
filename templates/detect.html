@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+<body>
+<div style="margin-top: 50px;" class="ui container">
+    <h1 class="ui center aligned header">Face Recognition</h1>
+    <div class="ui big image">
+        <img src={{url_for('static', filename=image)}} alt="test">
+    </div>
+    <table class="ui red table">
+        <thead>
+            <tr>
+                <th>Face</th>
+                <th>Additional Characteristics</th>
+                <th>Emotions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for face in faces %}
+            <tr>
+                <td>Face #{{loop.index}}</td>
+                <td>{{ face.characteristics }}</td>
+                <td>{{ face.emotionStr }}</td>
+            </tr>
+            {% endfor %}
+      </tbody>
+    </table>
+ </div>
+</body>
+</html>
