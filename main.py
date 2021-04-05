@@ -7,10 +7,6 @@ import os
 from google.cloud import vision
 from google.oauth2 import service_account
 from faceModel import FaceModel
-#from PIL import Image, ImageDraw
-
-#import boto3
-#from rekognition_image_detection import RekognitionImage
 
 logger = logging.getLogger(__name__)
 
@@ -65,7 +61,7 @@ def detect():
 
 # start flask app
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5004)
+    app.run(host="0.0.0.0", port=5003)
 
 
 

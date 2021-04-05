@@ -21,9 +21,6 @@ class FaceModel:
         fmtstr = 'Wearing headware: {}'.format(FaceModel.likelihood_name[self.headwear])
         return fmtstr
 
-    def getCharacteristics(self):
-            return self.characteristics
-
     def hasEmotions(self):
         emotionStr=""
         emotionStr += 'Joy: {}'.format(FaceModel.likelihood_name[self.joy]) + "; "
