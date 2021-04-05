@@ -1,2 +1,2 @@
-language = "undefined"
+language = "Python"
 run = "python main.py"
